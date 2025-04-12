@@ -1,0 +1,24 @@
+{
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//*[@id='openimmo-quick-search-form']/div[2]/div[5]/div/button",
+        "css_selector": "-",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'page-link') and contains(@aria-label, 'Nächste')]",
+        "css_selector": "a.page-link[aria-label='Nächste Immobilien Seite']",
+        "index": 0,
+        "element_description": "Next page button"
+    },
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//a[@title='details' and contains(@href, '/en/expose/') and not(.//img) and normalize-space()]",
+        "css_selector": "//a[@title='details' and contains(@href, '/en/expose/) and not(.//img) and normalize-space()]",
+        "index": 0,
+        "element_description": "Property detail link"
+    },
+    "search_page_url": "https://kensington-international.com/en"
+}

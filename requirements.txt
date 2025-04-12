@@ -1,0 +1,10 @@
+#playwright==1.51.0
+pydantic==2.10.4
+requests==2.32.3
+python-dotenv==1.0.1
+asyncio==3.4.3
+browser_use==0.1.40
+ruff==0.3.0
+langchain==0.3.0
+langchain-community==0.3.0
+langchain-anthropic==0.3.3
