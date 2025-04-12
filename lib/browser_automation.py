@@ -153,7 +153,7 @@ class BrowserAutomation:
                     # Move to next page
                     self.logger.info(f"Clicking next button on page {page}")
                     next_button = await self._attempt_to_find_element(
-                        search_schema.next_page_button
+                        search_schema.next_page_button,
                     )
                     if next_button:
                         await self.click_element(search_schema.next_page_button)
@@ -215,7 +215,9 @@ class BrowserAutomation:
 
         return new_page
 
-    async def _attempt_to_find_element(self, web_element: WebElement, current_page):
+    async def _attempt_to_find_element(
+        self, web_element: WebElement, current_page: Optional[Page] = None
+    ):
         """Attempts to find a web element using the provided selector."""
         self.logger.info(f"Attempting to find element: {web_element}")
         current_page = self._get_current_page(current_page)
