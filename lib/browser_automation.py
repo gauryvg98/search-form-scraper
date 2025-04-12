@@ -152,9 +152,16 @@ class BrowserAutomation:
 
                     # Move to next page
                     self.logger.info(f"Clicking next button on page {page}")
-                    await self.click_element(search_schema.next_page_button)
-                    self.logger.info(f"Page {page + 1} loaded")
-                    page += 1
+                    next_button = await self._attempt_to_find_element(
+                        search_schema.next_page_button
+                    )
+                    if next_button:
+                        await self.click_element(search_schema.next_page_button)
+                        self.logger.info(f"Page {page + 1} loaded")
+                        page += 1
+                    else:
+                        self.logger.info("Reached last page")
+                        break
 
                 except Exception as e:
                     self.logger.error(f"Error processing page {page}: {e!s}")
