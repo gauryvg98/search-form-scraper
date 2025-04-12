@@ -21,8 +21,9 @@ This project provides a framework for:
 ## Project Structure
 ```
 .
-├── create_web_search_schema.py  # Main schema generation script
-├── extract_urls.py             # URL extraction utilities
+├── scripts/    # Core Scripts
+│   ├── create_web_search_schema.py     # AI-powered schema generation
+│   ├── extract_urls.py         # Playwright-based automation for extracting urls as per schema
 ├── lib/                        # Core library components
 │   ├── browser_automation.py   # Browser automation logic
 │   ├── file_utils.py          # File management utilities
@@ -53,6 +54,24 @@ cp env.example .env
 ```
 
 ## Usage
+
+### Main Script
+
+The project includes a main script (`main.py`) that orchestrates the entire process of schema generation and URL extraction. It handles:
+
+1. Checking if a schema already exists for a given key
+2. Generating a new schema if needed
+3. Extracting URLs using the schema
+
+To run the main script:
+```bash
+python main.py
+```
+
+The script will:
+- Use "kensington" as the default key
+- Generate a schema for https://kensington-international.com/en if one doesn't exist
+- Extract URLs using the generated schema
 
 ### Generating Search Schemas
 
