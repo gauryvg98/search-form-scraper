@@ -3,7 +3,7 @@ import fcntl
 import logging
 import os
 import random
-from typing import Optional
+from typing import List, Optional
 from urllib.parse import urljoin
 
 from playwright.async_api import Browser, ElementHandle, Page
@@ -63,14 +63,27 @@ class BrowserAutomation:
             f"Clicked element {web_element.element_description or '[no description]'}"
         )
 
+    async def execute_steps(
+        self,
+        steps: List[WebElement],
+    ):
+        for step in steps:
+            try:
+                self.logger.info(f"Executing step: {step}")
+                await self.click_element(step)
+            except Exception as e:
+                self.logger.error(f"Error executing step {step}: {e!s}")
+                continue
+
     async def execute_search(
         self,
         schema: WebSearchSchema,
     ):
+        await self.execute_steps(schema.pre_search_steps)
         await self.main_page.goto(schema.search_page_url)
         await asyncio.sleep(FIVE_SECOND_WAIT)
-
-        await self.click_element(schema.submit_button)
+        if schema.do_perform_search:
+            await self.click_element(schema.submit_button)
 
         self.logger.info(
             f"Search button clicked, Waiting for detail link: {schema.detail_page_link.xpath}"
@@ -79,6 +92,8 @@ class BrowserAutomation:
             f"xpath={schema.detail_page_link.xpath}", timeout=TIMEOUT
         )
         self.logger.info("Detail links found")
+
+        await self.execute_steps(schema.post_search_steps)
 
     async def execute_search_and_save(
         self,
