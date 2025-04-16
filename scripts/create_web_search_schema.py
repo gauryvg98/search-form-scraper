@@ -25,11 +25,13 @@ browser_config = BrowserConfig(headless=False)
 
 default_websearch_schema_prompt = """
         Your task is to follow instructions to the point to execute the search.
+        If there are any popups, you must close them.
          - If there is no search form visible on the page, navigate to a search form page.
          - Click the submit search button to execute the search.
         Note the submit search_button and the exact url for the search_form_page.
         After the search results have loaded, validate whether the search results are paginated or is it the details page for a single property record.
         Steps to follow for paginated search:
+         - If there are any popups, you must close them.
          - Click the next page button on the bottom of the page to navigate to the next results page.
          - Click the next page button again
          - Click on a detail page link
@@ -234,6 +236,20 @@ def get_sample_web_search_example():
                     "element_description": "Detail page links. There can be multiple detail page links in the search results page. Use contains() function in the xpath to match all the row links in the table."
                 },
                 "search_page_url": "https://property-search.example.com/search",
+                "do_perform_search": true,
+                "pre_search_steps": [
+                    {
+                        "id": "close_popup",
+                        "xpath": "//button[@aria-label='Close']",
+                        "element_description": "Close button"
+                    }
+                ],
+                "post_search_steps": [
+                    {
+                        "id": "close_popup",
+                        "xpath": "//button[@aria-label='Close']",
+                        "element_description": "Close button"
+                    }
             }
 
     Here are pydantic models for the schema:
@@ -259,6 +275,15 @@ def get_sample_web_search_example():
         submit_button: WebElement
         next_page_button: WebElement
         search_page_url: str
+        do_perform_search: Optional[bool] = Field(
+            default=None, description="Whether to perform a search"
+        )
+        pre_search_steps: Optional[List[WebElement]] = Field(
+            default=[], description="Clicks before searching"
+        )
+        post_search_steps: Optional[List[WebElement]] = Field(
+            default=[], description="Clicks after searching"
+        )
     """
 
 
