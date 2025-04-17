@@ -72,6 +72,7 @@ class BrowserAutomation:
             try:
                 self.logger.info(f"Executing step: {step}")
                 await self.click_element(step)
+                await asyncio.sleep(FIVE_SECOND_WAIT)
             except Exception as e:
                 self.logger.error(f"Error executing step {step}: {e!s}")
                 continue
@@ -84,6 +85,9 @@ class BrowserAutomation:
         await asyncio.sleep(FIVE_SECOND_WAIT)
         await self.execute_steps(schema.pre_search_steps)
         if schema.do_perform_search:
+            await self.main_page.wait_for_selector(
+                f"xpath={schema.search_input.xpath}", timeout=TIMEOUT
+            )
             await self.click_element(schema.submit_button)
 
         self.logger.info(
