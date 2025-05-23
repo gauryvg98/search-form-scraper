@@ -1,0 +1,27 @@
+{
+    "do_perform_search": false,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'listings__grid__item')]//a[contains(@href, '/properties/')]",
+        "css_selector": "div.property-card a",
+        "index": 0,
+        "element_description": "Property detail page links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'pagination-next') or contains(text(), 'Next') or contains(text(), '>')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results pagination"
+    },
+    "search_page_url": "https://www.avisonyoung.us/properties#/?view=list",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

@@ -1,0 +1,35 @@
+{
+    "do_perform_search": false,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//a[contains(@href, '/properties/')]",
+        "css_selector": "div.cbc1__card a.cbc1__link",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@class='search-btn-trigger cb-search__submit hidden-sm hidden-xs']",
+        "css_selector": "button.search-btn-trigger.cb-search__submit.hidden-sm.hidden-xs",
+        "index": 0,
+        "element_description": "SEARCH button on homepage"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[@aria-label='Next' and @data-page='next']",
+        "css_selector": "a.pagination__next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://www.cbcworldwide.com/search/properties",
+    "pre_search_steps": [
+        {
+            "id": "truste-consent-button",
+            "xpath": "//button[@id='truste-consent-button']",
+            "css_selector": "#truste-consent-button",
+            "index": 0,
+            "element_description": "OK button on cookie consent popup"
+        }
+    ],
+    "post_search_steps": []
+}

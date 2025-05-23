@@ -24,9 +24,9 @@ browser_config = BrowserConfig(headless=False)
 
 
 default_websearch_schema_prompt = """
-        Your task is to follow instructions to the point to execute the search.
+        Your task is to follow instructions to the point to find a property search form and execute the search.
         If there are any popups, you must close them.
-         - If there is no search form visible on the page, navigate to a search form page.
+         - If there is no search form visible on the page, navigate to a property search form page.
          - Click the submit search button to execute the search.
         Note the submit search_button and the exact url for the search_form_page.
         After the search results have loaded, validate whether the search results are paginated or is it the details page for a single property record.
