@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'result-item')]//a[contains(@href, '/property/')]",
+        "css_selector": "div.result-item a",
+        "index": 0,
+        "element_description": "Detail page links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(text(), '>') or contains(text(), 'Next')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://app.rcanalytics.com/",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

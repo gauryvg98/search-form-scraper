@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//div[contains(@class, 'property-card')]//a[contains(@href, '/property-')]",
+        "css_selector": "div.property-card a[href*='/property-']",
+        "index": 0,
+        "element_description": "Property detail page links in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//li/button[@role='tab' and contains(@id, 'slick-slide-control')]",
+        "css_selector": "li > button[role='tab'][id^='slick-slide-control']",
+        "index": 0,
+        "element_description": "Pagination button to navigate to next page of search results"
+    },
+    "search_page_url": "https://www.colliers.com/en-in/property-search",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//div[contains(@class, 'div')]/a[contains(@href, '/properties/')]",
+        "css_selector": "div > a[href*='/properties/']",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//input[@type='submit']",
+        "css_selector": "input[type='submit']",
+        "index": 0,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[contains(text(), '>') or contains(@class, 'next')]",
+        "css_selector": "a.next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://www.lee-associates.com/properties/",
+    "pre_search_steps": [
+        {
+            "id": "cookie_action_close_header",
+            "xpath": "//a[@id='cookie_action_close_header']",
+            "css_selector": "a#cookie_action_close_header",
+            "index": 0,
+            "element_description": "Accept cookies button"
+        }
+    ],
+    "post_search_steps": []
+}

@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'property-card')]//a[contains(@href, '/property/')]",
+        "css_selector": ".property-card a[href*='/property/']",
+        "index": 0,
+        "element_description": "Links to property detail pages in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//form//button[@type='submit']",
+        "css_selector": "form button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'pagination-next') or contains(text(), 'Next') or contains(text(), '>')]",
+        "css_selector": ".pagination-next, a:contains('Next'), a:contains('>')",
+        "index": 0,
+        "element_description": "Next page button for search results pagination"
+    },
+    "search_page_url": "https://www.loopnet.com/search/",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

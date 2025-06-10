@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'property-card')]//a[contains(@href, '/real-estate/')]",
+        "css_selector": "div.property-card a[href*='/real-estate/']",
+        "index": 0,
+        "element_description": "Property listing links"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@class='btn btn-primary btn-sm-mobile' and @type='submit' and @aria-label='Search']",
+        "css_selector": "button.btn.btn-primary.btn-sm-mobile[type='submit'][aria-label='Search']",
+        "index": 0,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[@class='page-link next' and @role='button' and @aria-label='next']",
+        "css_selector": "a.page-link.next[role='button'][aria-label='next']",
+        "index": 0,
+        "element_description": "Next page button"
+    },
+    "search_page_url": "https://www.century21.com/real-estate/atlanta-ga/LCGAATLANTA/",
+    "pre_search_steps": [
+        {
+            "id": "select_location",
+            "xpath": "//a[contains(@href, '/real-estate/atlanta-ga/LCGAATLANTA/')]",
+            "css_selector": "a[href*='/real-estate/atlanta-ga/LCGAATLANTA/']",
+            "index": 0,
+            "element_description": "Atlanta, GA location option"
+        }
+    ],
+    "post_search_steps": []
+}

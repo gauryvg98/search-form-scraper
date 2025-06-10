@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'form')]/div[contains(@class, 'div')]/div[contains(@class, 'div')]/div/div/a[contains(@href, '/properties/')]",
+        "css_selector": "div.form div.div div.div div div a[href*='/properties/']",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button.form-submit-search[type='submit']",
+        "index": 0,
+        "element_description": "Search button on homepage"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'next') or contains(text(), 'Next') or contains(text(), '>')]",
+        "css_selector": "a.next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://www.nmrk.com/properties",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}
