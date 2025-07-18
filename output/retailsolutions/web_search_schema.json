@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'property-item')]//a[contains(@href, '/property/')]",
+        "css_selector": "div.property-item a",
+        "index": 0,
+        "element_description": "Links to property detail pages in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//form/button",
+        "css_selector": "form button",
+        "index": 0,
+        "element_description": "Search button to submit the property search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(text(), '>') or contains(@class, 'next')]",
+        "css_selector": "a.next, a:contains('>')",
+        "index": 0,
+        "element_description": "Next page button for pagination"
+    },
+    "search_page_url": "https://resolutre.com/properties",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

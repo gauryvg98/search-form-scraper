@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'property-card')]//a[contains(@href, '/properties/')]",
+        "css_selector": "div.property-card a[href*='/properties/']",
+        "index": 0,
+        "element_description": "Property detail page links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//a[contains(@class, 'btn-secondary') and contains(@href, 'lease-property-search')]",
+        "css_selector": "a.btn.btn-secondary[href*='lease-property-search']",
+        "index": 0,
+        "element_description": "View All button for Office properties to execute search"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'pagination-next') or contains(text(), 'Next') or contains(text(), '>')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results pagination"
+    },
+    "search_page_url": "https://www.cushmanwakefield.com/en/united-states/properties/lease",
+    "pre_search_steps": [
+        {
+            "id": "close_region_popup",
+            "xpath": "//a[contains(@class, 'btn') and contains(@title, 'Find a Property')]",
+            "css_selector": "a.btn[title='Find a Property']",
+            "index": 0,
+            "element_description": "Close button for region selection popup"
+        }
+    ],
+    "post_search_steps": []
+}

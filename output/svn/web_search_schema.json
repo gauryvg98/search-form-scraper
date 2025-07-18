@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'div')]/a[contains(@href, 'propertyId')]",
+        "css_selector": "div > a[href*='propertyId']",
+        "index": 0,
+        "element_description": "Property listing links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//button[contains(text(), 'Next') or contains(@aria-label, 'Next') or contains(text(), '>')]",
+        "css_selector": "button:contains('Next'), button[aria-label*='Next'], button:contains('>')",
+        "index": 0,
+        "element_description": "Next page button for pagination"
+    },
+    "search_page_url": "https://svn.com/properties/",
+    "pre_search_steps": [
+        {
+            "id": "accept_cookies",
+            "xpath": "//button[contains(@title, 'Accept all cookies')]",
+            "css_selector": "button[title='Accept all cookies']",
+            "index": null,
+            "element_description": "Accept all cookies button"
+        }
+    ],
+    "post_search_steps": []
+}

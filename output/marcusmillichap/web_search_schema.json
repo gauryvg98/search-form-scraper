@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div/a[contains(@href, '/properties/')]",
+        "css_selector": "div > a[href*='/properties/']",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//a[@class='button score-button btnSubmit']",
+        "css_selector": "a.button.score-button.btnSubmit",
+        "index": 0,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@href, 'pageNumber')]",
+        "css_selector": "a[href*='pageNumber']",
+        "index": 0,
+        "element_description": "Next page button for pagination"
+    },
+    "search_page_url": "https://www.marcusmillichap.com/properties",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

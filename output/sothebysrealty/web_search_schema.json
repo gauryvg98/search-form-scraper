@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//li/div/a[contains(@class, 'Results-card')]",
+        "css_selector": "li > div > a.Results-card",
+        "index": 0,
+        "element_description": "Property detail page links"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@aria-label='Search']",
+        "css_selector": "button.Entity-search__btn.Entity-search__btn--location",
+        "index": 0,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[contains(@class, 'Pagination__item--arrow') and @aria-label='Next']",
+        "css_selector": "a.Pagination__item.Pagination__item--arrow[aria-label='Next']",
+        "index": 0,
+        "element_description": "Next page button"
+    },
+    "search_page_url": "https://www.sothebysrealty.com/eng/sales/int",
+    "pre_search_steps": [
+        {
+            "id": "truste-consent-button",
+            "xpath": "//button[@id='truste-consent-button']",
+            "css_selector": "button#truste-consent-button",
+            "index": null,
+            "element_description": "OK button on cookie consent popup"
+        }
+    ],
+    "post_search_steps": []
+}

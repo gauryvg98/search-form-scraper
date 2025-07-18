@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//main//section//ul//li//a[contains(@href, '/property/')]",
+        "css_selector": "main section ul li a[href*='/property/']",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button.ButtonPrimarySm[type='submit']",
+        "index": 0,
+        "element_description": "Search button to execute property search"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(text(), '>') or contains(@aria-label, 'Next')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results pagination"
+    },
+    "search_page_url": "https://www.kw.com/search/sale",
+    "pre_search_steps": [
+        {
+            "id": "close_cookie_popup",
+            "xpath": "//button[contains(@class, 'cookie') or contains(@aria-label, 'Cookie')]",
+            "css_selector": null,
+            "index": null,
+            "element_description": "Cookie preferences button to close popup"
+        }
+    ],
+    "post_search_steps": []
+}

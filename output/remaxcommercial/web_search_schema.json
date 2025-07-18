@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//div[contains(@class, 'property-item')]//a",
+        "css_selector": "div.property-item a",
+        "index": 0,
+        "element_description": "Detail page links for property listings"
+    },
+    "submit_button": {
+        "id": "runFilter",
+        "xpath": "//button[@id='runFilter']",
+        "css_selector": "button#runFilter",
+        "index": 0,
+        "element_description": "Apply search button"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[contains(@class, 'next-page')]",
+        "css_selector": "a.next-page",
+        "index": 0,
+        "element_description": "Next page button"
+    },
+    "search_page_url": "https://www.remaxcommercial.com/company-listing/",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

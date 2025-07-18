@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//article//a[contains(@href, '/property-for-sale/')]",
+        "css_selector": null,
+        "index": 0,
+        "element_description": "Detail page links for properties"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button.sv-button[type='submit']",
+        "index": 0,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//button[contains(@class, 'ButtonArrowNext')]",
+        "css_selector": "button.Buttonsstyled__ButtonArrowNext-sc-y2ln8a-2",
+        "index": 0,
+        "element_description": "Next page button"
+    },
+    "search_page_url": "https://search.savills.com/in/en/list/property-for-sale/united-states-of-america",
+    "pre_search_steps": [
+        {
+            "id": "close_cookie_banner",
+            "xpath": "//button[contains(@class, 'sv-button')]",
+            "css_selector": null,
+            "index": null,
+            "element_description": "Allow all cookies button"
+        }
+    ],
+    "post_search_steps": []
+}

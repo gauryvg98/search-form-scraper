@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//section[contains(@class, 'projects')]//a[contains(@href, '/projects/')]",
+        "css_selector": "section.projects a",
+        "index": 0,
+        "element_description": "Project detail links in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@aria-label='Search']",
+        "css_selector": "button[aria-label='Search']",
+        "index": 12,
+        "element_description": "Search submit button"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[contains(@class, 'more') and contains(@class, 'collapsed')]",
+        "css_selector": "a.more.collapsed",
+        "index": 17,
+        "element_description": "Pagination expand button"
+    },
+    "search_page_url": "https://www.gensler.com/search",
+    "pre_search_steps": [
+        {
+            "id": "",
+            "xpath": "//button[contains(@class, 'btn-search')]",
+            "css_selector": "button.btn-search",
+            "index": 10,
+            "element_description": "Search button to open search form"
+        }
+    ],
+    "post_search_steps": []
+}

@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//a[contains(@href, '/properties/') or contains(@href, '/listings/')]",
+        "css_selector": "a[href*='/properties/'], a[href*='/listings/']",
+        "index": 0,
+        "element_description": "Links to property detail pages in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@type='submit']",
+        "css_selector": "button[type='submit']",
+        "index": 0,
+        "element_description": "Submit button for the search form"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//a[contains(@class, 'pagination-next') or contains(text(), 'Next') or contains(text(), '>')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://www.eastdilsecured.com/properties",
+    "pre_search_steps": [
+        {
+            "id": "onetrust-accept-btn-handler",
+            "xpath": "//button[@id='onetrust-accept-btn-handler']",
+            "css_selector": "#onetrust-accept-btn-handler",
+            "index": 0,
+            "element_description": "Accept cookies button"
+        }
+    ],
+    "post_search_steps": []
+}

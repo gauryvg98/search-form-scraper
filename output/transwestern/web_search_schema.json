@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div/div/div/h4/a[contains(@href, '/property/')]",
+        "css_selector": "div > div > div > h4 > a[href*='/property/']",
+        "index": 0,
+        "element_description": "Property detail links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//*[@id='mid-wrapper']/section[1]/div[1]/form/input[3]",
+        "css_selector": "form > button[type='submit']",
+        "index": 9,
+        "element_description": "Search button to execute the search"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//ul[contains(@class, 'pagination')]/li[last()]/a",
+        "css_selector": "ul.pagination > li:last-child > a",
+        "index": 0,
+        "element_description": "Next page button for pagination"
+    },
+    "search_page_url": "https://transwestern.com/properties",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

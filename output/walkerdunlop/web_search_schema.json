@@ -1,0 +1,35 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//div[contains(@class, 'property-item')]//a[contains(text(), 'Details')]",
+        "css_selector": "div.property-item a:contains('Details')",
+        "index": 0,
+        "element_description": "Detail page links for property listings"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//a[contains(@href, 'properties.walkerdunlop.com')]",
+        "css_selector": "a[href='https://properties.walkerdunlop.com/'][target='_blank']",
+        "index": 0,
+        "element_description": "View available properties button that serves as search submit"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(text(), '>') or contains(@aria-label, 'Next')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for property listings"
+    },
+    "search_page_url": "https://properties.walkerdunlop.com/",
+    "pre_search_steps": [
+        {
+            "id": "close_cookie_popup",
+            "xpath": "//a[contains(@class, 'cc-btn') and contains(@class, 'cc-allow')]",
+            "css_selector": "a.cc-btn.cc-allow",
+            "index": 0,
+            "element_description": "Accept cookies button"
+        }
+    ],
+    "post_search_steps": []
+}

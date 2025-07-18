@@ -1,0 +1,27 @@
+{
+    "do_perform_search": false,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//a[contains(@href, '/commercial-space/details/')]",
+        "css_selector": "div a[href*='/properties/']",
+        "index": 0,
+        "element_description": "Property detail page links in search results"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//div[contains(@class, 'cbre-c-globalNav__link') or contains(@class, 'cbre-c-globalNavDropdown__link')]//img",
+        "css_selector": "div.cbre-c-globalNav__link img, div.cbre-c-globalNavDropdown__link img",
+        "index": 0,
+        "element_description": "Search button for the search form"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//li[@class='cbre-c-pl-pager__next']",
+        "css_selector": "li.cbre-c-pl-pager__next",
+        "index": 0,
+        "element_description": "Next page button for pagination"
+    },
+    "search_page_url": "https://www.cbre.com/properties/properties-for-lease/commercial-space",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "",
+        "xpath": "//a[contains(@href, '/property/')]",
+        "css_selector": "a[href*='/property/']",
+        "index": 0,
+        "element_description": "Property detail page links in search results"
+    },
+    "submit_button": {
+        "id": "",
+        "xpath": "//button[@type='button' and contains(@class, 'any-button-wrap')]",
+        "css_selector": "button.any-button-wrap[type='button']",
+        "index": 16,
+        "element_description": "Location selection button that submits the search"
+    },
+    "next_page_button": {
+        "id": "",
+        "xpath": "//button[contains(@class, 'any-form-button') and contains(@class, 'button') and contains(@class, 'secondary')]",
+        "css_selector": "button.any-form-button.button.secondary.normal",
+        "index": 229,
+        "element_description": "Next page button for search results pagination"
+    },
+    "search_page_url": "https://www.era.com/",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}

@@ -57,7 +57,7 @@ class BrowserAutomation:
             )
 
         await element.click()
-        await current_page.wait_for_load_state("networkidle", timeout=TIMEOUT)
+        await current_page.wait_for_load_state("domcontentloaded", timeout=TIMEOUT)
 
         self.logger.info(
             f"Clicked element {web_element.element_description or '[no description]'}"
@@ -85,9 +85,6 @@ class BrowserAutomation:
         await asyncio.sleep(FIVE_SECOND_WAIT)
         await self.execute_steps(schema.pre_search_steps)
         if schema.do_perform_search:
-            await self.main_page.wait_for_selector(
-                f"xpath={schema.search_input.xpath}", timeout=TIMEOUT
-            )
             await self.click_element(schema.submit_button)
 
         self.logger.info(

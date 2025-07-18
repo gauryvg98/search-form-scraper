@@ -50,7 +50,7 @@ async def extract_urls(key: str):
 
 
 def main():
-    key = "kensington"
+    key = "transwestern"
     create_nested_directory(f"output/{key}")
     asyncio.run(extract_urls(key))
 

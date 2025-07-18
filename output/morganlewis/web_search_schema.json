@@ -1,0 +1,27 @@
+{
+    "do_perform_search": true,
+    "detail_page_link": {
+        "id": "detail_page_link",
+        "xpath": "//a[contains(@class, 'service-link')]",
+        "css_selector": "a.service-link",
+        "index": 0,
+        "element_description": "Detail page links for practice areas"
+    },
+    "submit_button": {
+        "id": "submit_button",
+        "xpath": "//button[@type='button' and contains(@class, 'ml-button--search')]",
+        "css_selector": "button.ml-button--search[type='button']",
+        "index": 31,
+        "element_description": "Search button"
+    },
+    "next_page_button": {
+        "id": "next_page_button",
+        "xpath": "//a[contains(@class, 'pagination-next')]",
+        "css_selector": "a.pagination-next",
+        "index": 0,
+        "element_description": "Next page button for search results"
+    },
+    "search_page_url": "https://www.morganlewis.com/our-services",
+    "pre_search_steps": [],
+    "post_search_steps": []
+}
